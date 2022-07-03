@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:quiz_app_pencilbox/all_data.dart';
+import 'package:quiz_app_pencilbox/pages/home_page.dart';
 
 class ResultPage extends StatefulWidget {
   static const routeName = "result-page";
@@ -65,7 +66,21 @@ class _ResultPageState extends State<ResultPage> {
                 Padding(
                   padding: const EdgeInsets.all(30.0),
                   child: Text("You attempt 10 questions and from that $rightAnswerCount answer is correct",textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.w500,letterSpacing: 1,color: Colors.green),),
-                )
+                ),
+
+                OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    primary: Colors.red,
+                    side: BorderSide(color: Colors.red),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                        
+                    )
+                  ),
+                  onPressed: (){
+                    Navigator.of(context).pushReplacementNamed(HomePage.routeName);
+                  },
+                 child: Text("Try Again"))
                 
               ],),
 

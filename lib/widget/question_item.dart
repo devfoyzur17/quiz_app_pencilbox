@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors
+// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, unused_field
 
 import 'package:flutter/material.dart';
 import 'package:quiz_app_pencilbox/all_data.dart';
@@ -16,6 +16,7 @@ class QuestionItem extends StatefulWidget {
 class _QuestionItemState extends State<QuestionItem> {
   var groupValue = "";
   bool isSelected = false;
+  
   @override
   Widget build(BuildContext context) {
     return Card(
